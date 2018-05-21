@@ -1,5 +1,3 @@
-.DS_Store
-.tweet-cache
-.grunt
 _site
-node_modules
+.sass-cache
+.jekyll-metadata
