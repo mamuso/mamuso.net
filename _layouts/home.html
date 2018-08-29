@@ -1,4 +1,13 @@
----
-layout: default
----
-{{ content }}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include head.html %}
+<body>
+  {% include header.html %}
+  <section class="site-intro site-block">
+    <h2>Hi,</h2>
+    <p>I'm Manuel Muñoz Solera, and I work at Microsoft designing developer experiences. I spend most of my time thinking and talking with people who know much more than me. Seriously, isn't that great?</p>
+    <p>I enjoy coding small, purposeful tools as much as I love drawing compulsively.</p>
+    <p>If you are close to San Francisco, <a href="mailto:mamuso@mamuso.net">drop me a line!</a></p>
+  </section>
+</body>
+</html>

@@ -1,0 +1,39 @@
+p {
+  margin: 1.6rem 0;
+  line-height: 1.4;
+}
+
+h2 {
+  margin-bottom: 3rem;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 4.8rem;
+}
+
+
+.site-block { max-width: 72rem;
+  a {
+    border-bottom: 2px solid rgba($brand-color, .4);
+    text-decoration: none;
+    color: $text-color;
+    transition: all $animation;
+    &:hover {
+      color: $brand-color;
+    }
+  }
+}
+
+// Site header
+.site-header {
+  path { transition: transform $animation; }
+  .logo {
+    padding: .5rem;
+    margin-left: -1rem;
+  }
+  .logo:hover .pl { transform: translate(1.2rem); }
+  .logo:hover .pr { transform: translate(-1.2rem); }
+}
+
+// Site intro
+.site-intro {
+  margin: 4.8em 0;
+}
