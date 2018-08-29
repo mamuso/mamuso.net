@@ -12,12 +12,17 @@ h2 {
 
 .site-block { max-width: 72rem;
   a {
-    border-bottom: 2px solid rgba($brand-color, .4);
+    border-bottom: 2px solid rgba($text-color, .2);
     text-decoration: none;
     color: $text-color;
     transition: all $animation;
-    &:hover {
+    background: linear-gradient(2deg, $background-nav 0%, $background-nav 50%, $background-color 55%); /* w3c */
+    background-position: 0% 0%;
+    background-size: 400% 400%;
+      &:hover {
+      border-bottom: 2px solid rgba($brand-color, .6);
       color: $brand-color;
+      background-position: 0% 70%;
     }
   }
 }

@@ -29,7 +29,7 @@ body { font-family: $base-font-family; }
 // Basic styling
 body {
   padding: 6rem 8rem 4rem;
-  height:100vh;
+  min-height:100vh;
   font: $base-font-weight $base-font-size $base-font-family;
   font-kerning: normal;
   color: $text-color;
