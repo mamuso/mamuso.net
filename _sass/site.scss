@@ -16,7 +16,7 @@ h2 {
     text-decoration: none;
     color: $text-color;
     transition: all $animation;
-    background: linear-gradient(4deg, $background-nav 0%, $background-nav 50%, rgba($background-color, 0) 51%); /* w3c */
+    background: linear-gradient(9deg, $background-nav 0%, $background-nav 40%, rgba($background-color, 0) 41%); /* w3c */
     background-position: 0% 0%;
     background-size: 400% 400%;
       &:hover {
