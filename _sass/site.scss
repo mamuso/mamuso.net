@@ -1,6 +1,6 @@
 p {
   margin: 1.6rem 0;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 h2 {
@@ -29,7 +29,13 @@ h3 {
 // Site 
 .site-intro { margin: 8.8rem 0 16rem; }
 
-.site-block { max-width: 72rem;
+.site-block { 
+  width: 88rem;
+  max-width: 100%;
+  p {
+    width: 72rem;
+    max-width: 100%;
+  }
   a {
     border-bottom: 2px solid rgba($text-color, .2);
     text-decoration: none;
@@ -48,6 +54,7 @@ h3 {
 
 // Projects
 .projects {
+  .project { margin-bottom: 10rem; }
   h2 { font-size: $font-size-xl; }
   header {
     h3 { margin-bottom: 0.4rem; }
@@ -62,10 +69,39 @@ h3 {
     list-style: none;
     li { margin: 2rem 0; }
     img { 
-      max-width: 88rem;
+      width: 88rem;
+      max-width: 100%;
       border-radius: $base-radius;
       box-shadow: 0 1px 2px rgba($text-color, .2);
     }
-    .img-mobile { max-height: 45rem;}
   }
+}
+
+// blog
+.blog {
+  margin: 8.8rem 0 16rem;
+  ul {
+    border-top: 1px solid rgba($text-color, .05);
+  }
+  li {
+    list-style: none;
+    width: 100%;
+    a { 
+      display: block;
+      padding: 0.8rem 1.6rem;
+      border-bottom: 1px solid rgba($text-color, .05);
+      border-radius: $base-radius;
+      &:hover {
+        border-bottom: 1px solid rgba($text-color, .05);
+      }
+    }
+    .emoji {
+      font-size: $font-size-s;
+    }
+  }
+}
+
+
+@media only screen and ( max-width: 767px) and (min-width: 320px) {
+  body { padding: 4rem 4rem; }
 }
