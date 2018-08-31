@@ -3,7 +3,7 @@ p {
   line-height: 1.5;
 }
 
-h2 {
+h1, h2 {
   margin-bottom: 3rem;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: $font-size-xxxl;
@@ -27,10 +27,13 @@ h3 {
 }
 
 // Site 
-.site-intro { margin: 8.8rem 0 20rem; }
+.site-intro { 
+  margin: 8.8rem 0 20rem; 
+  h2 { letter-spacing: -0.1rem; }
+}
 
 .site-block { 
-  width: 88rem;
+  width: 96rem;
   max-width: 100%;
   p {
     width: 72rem;
@@ -76,7 +79,7 @@ h3 {
     list-style: none;
     li { margin: 2rem 0; }
     img { 
-      width: 88rem;
+      width: 96rem;
       max-width: 100%;
       border-radius: $base-radius;
       box-shadow: 0 1px 2px rgba($text-color, .2);
@@ -156,13 +159,41 @@ h3 {
   }
 }
 
+// post 
+.post { 
+  margin: 8.8rem 0 20rem;
+  header {
+    h1 { 
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.1rem;
+    }
+    time { 
+      font-size: $font-size-m;
+      margin: 0 0 1.2rem;
+      color: $secondary-color;
+    }
+  }
+  .post-content {
+    margin: 6rem 0 0
+  }
+}
+
+// post specials
+.coffee-collage {
+  margin-top: 6rem;
+  p { width: 100%; }
+  img { width: 32%; }
+}
+
 
 @media only screen and ( max-width: 767px) and (min-width: 320px) {
   body { padding: 3.2rem; }
-  .site-intro { margin: 6.8rem 0 16rem; }
+  .site-intro, .post { margin: 6.8rem 0 16rem; }
   .site-footer { 
     text-align: center;
     line-height: 1.6;
   }
   .site-footer a .emoji { display: none; }
+  .coffee-collage img { width: 48.5%; }
+  
 }

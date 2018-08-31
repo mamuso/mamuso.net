@@ -2,10 +2,17 @@
 layout: default
 ---
 
-<article class="post">
+<article class="post site-block">
   <header>
     {% if page.title %}
-      <h1>{{ page.title }}</h1>
+    <h1>{{ page.title }}</h1>
     {% endif %}
+    <time datetime="{{ page.date | date_to_xmlschema }}">
+    {%- assign date_format = date_format | default: "%B %Y" -%}
+    {{ page.date | date: date_format }}
+    </time>
   </header>
+  <div class="post-content">
+    {{ content }}
+  </div>  
 </article>
