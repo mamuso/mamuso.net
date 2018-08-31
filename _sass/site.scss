@@ -143,14 +143,13 @@ h3 {
     .emoji {
       display: inline-block;
       filter: grayscale(100%);
-      opacity: 0;
+      vertical-align: -0.2rem;
       transition: all $animation
     }
-      &:hover {
+    &:hover {
       color: $brand-color;
       background-position: 0% 70%;
       .emoji {
-        opacity: 1;
         filter: none;
       }
     }
