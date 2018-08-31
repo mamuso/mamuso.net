@@ -27,7 +27,7 @@ h3 {
 }
 
 // Site 
-.site-intro { margin: 8.8rem 0 16rem; }
+.site-intro { margin: 8.8rem 0 20rem; }
 
 .site-block { 
   width: 88rem;
@@ -54,8 +54,12 @@ h3 {
 
 // Projects
 .projects {
-  .project { margin-bottom: 10rem; }
-  h2 { font-size: $font-size-xl; }
+  .project { margin-bottom: 18rem; }
+  .project-intro { margin-bottom: 8rem; }
+  h2 { 
+    margin-bottom: 0.4rem;
+    font-size: $font-size-l; 
+  }
   header {
     h3 { margin-bottom: 0.4rem; }
     p { 
@@ -63,6 +67,9 @@ h3 {
       margin: 0 0 1.2rem;
       color: $secondary-color;
     }
+  }
+  ul li {
+    margin: 0.8rem 2.2rem;
   }
   .project-gallery {
     margin-top: 6rem;
@@ -79,8 +86,11 @@ h3 {
 
 // blog
 .blog {
-  margin: 8.8rem 0 16rem;
+  margin: 0 0 20rem;
+  h2 { font-size: $font-size-l; }
   ul {
+    width: 72rem;
+    max-width: 100%;
     border-top: 1px solid rgba($text-color, .05);
   }
   li {
@@ -91,8 +101,19 @@ h3 {
       padding: 0.8rem 1.6rem;
       border-bottom: 1px solid rgba($text-color, .05);
       border-radius: $base-radius;
+      .emoji {
+        display: inline-block;
+        margin-right: 4px;
+        font-size: $font-size-s;
+        filter: grayscale(100%);
+        transition: all $animation
+      }  
       &:hover {
         border-bottom: 1px solid rgba($text-color, .05);
+        .emoji {
+          margin-right: 12px;
+          filter: none;
+        }  
       }
     }
     .emoji {
@@ -101,7 +122,48 @@ h3 {
   }
 }
 
+.site-footer {
+  font-size: $font-size-m;
+  ul { margin-left: -0.6rem; }
+  li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 0.4rem;
+  }
+  a {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    text-decoration: none;
+    color: $secondary-color;
+    transition: all $animation;
+    background: linear-gradient(12deg, $background-nav 0%, $background-nav 40%, rgba($background-color, 0) 41%); /* w3c */
+    background-position: 50% 0%;
+    background-size: 400% 400%;
+    border-radius: $base-radius;
+    .emoji {
+      display: inline-block;
+      filter: grayscale(100%);
+      opacity: 0;
+      transition: all $animation
+    }
+      &:hover {
+      color: $brand-color;
+      background-position: 0% 70%;
+      .emoji {
+        opacity: 1;
+        filter: none;
+      }
+    }
+  }
+}
+
 
 @media only screen and ( max-width: 767px) and (min-width: 320px) {
   body { padding: 3.2rem; }
+  .site-intro { margin: 6.8rem 0 16rem; }
+  .site-footer { 
+    text-align: center;
+    line-height: 1.6;
+  }
+  .site-footer a .emoji { display: none; }
 }

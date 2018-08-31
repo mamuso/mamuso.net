@@ -11,10 +11,11 @@
   </section>
 
   <section class="blog site-block">
+    <h2>When I'm not working:</h2>
     <ul>
       {% for post in site.posts limit:5 %}
       <li>
-        <a href=""><span class="emoji">{{ post.emoji }}</span> {{ post.title }}</a>
+        <a href="{{ post.url }}"><span class="emoji">{{ post.emoji }}</span> {{ post.title }}</a>
       </li>
       {% endfor %}
       </ul>
@@ -25,9 +26,9 @@
   </section>
 
   <div class="projects">
-
-    <section class="project site-block">
-      <p>Before joining the Developer Services team at Microsoft, I had a lot of fun in a few other companies.</p>
+    <section class="project project-intro site-block">
+        <h2>In a galaxy far far away...</h2>
+        <p>Before joining the Developer Services team at Microsoft, I had a lot of fun in a few other companies.</p>
     </section>
 
     <section class="project site-block">
@@ -63,10 +64,18 @@
         <header>
           <h3>What else?</h3>
         </header>
-        <p>A lot more! I had fun with some friends starting up our own small web design studio (2001-2005). <a href="https://the-cocktail.com/">The Cocktail</a> (2006-2010) taught me everything I know about building products with a love of craft. I had a lot of fun building <a href="http://unvlog.com/">Unvlog</a> (2007) and <a href="http://iwannagothere.com/">Iwannagothere</a> (2008). I briefly touched base with <a href="https://jobandtalent.com/">Job&Talent</a> (2010). And I met a lot of awesome people while I was hosting the <a href="https://vimeo.com/04x10">04x10</a> event (2012-2013). </p>  
+        <p>A lot more! </p>
+        <ul>
+          <li>I had fun with some friends starting up our own small web design studio (2001-2005).</li>
+          <li><a href="https://the-cocktail.com/">The Cocktail</a> (2006-2010) taught me everything I know about building products with a love of craft.</li>
+          <li>I had a lot of fun building <a href="http://unvlog.com/">Unvlog</a> (2007) and <a href="http://iwannagothere.com/">Iwannagothere</a> (2008).</li>
+          <li>I briefly touched base with <a href="https://jobandtalent.com/">Job&Talent</a> (2010).</li>
+          <li>And I met a lot of awesome people while I was hosting the <a href="https://vimeo.com/04x10">04x10</a> event (2012-2013).</li>
+        </ul>
       </section>
 
   </div>
-
+  
+  {% include footer.html %}
 </body>
 </html>
