@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Drawing my vacation"
+title:  "The family comic book"
 emoji: 🖍
 date:   2018-05-27
 ---
