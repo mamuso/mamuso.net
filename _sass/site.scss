@@ -1,54 +1,64 @@
 p {
   margin: 1.6rem 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 h1, h2 {
   margin-bottom: 3rem;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: $font-size-xxxl;
 }
 
 h3 {
   margin-bottom: 1rem;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: $font-size-xxl;
 }
 
 // Site header
 .site-header {
-  path { transition: transform $animation; }
+  path {
+    transition: transform $animation;
+  }
   .logo {
-    padding: .5rem;
+    padding: 0.5rem;
     margin-left: -1rem;
   }
-  .logo:hover .pl { transform: translate(1.2rem); }
-  .logo:hover .pr { transform: translate(-1.2rem); }
+  .logo:hover .pl {
+    transform: translate(1.2rem);
+  }
+  .logo:hover .pr {
+    transform: translate(-1.2rem);
+  }
 }
 
-// Site 
-.site-intro { 
-  margin: 8.8rem 0 20rem; 
-  h2 { letter-spacing: -0.1rem; }
+// Site
+.site-intro {
+  margin: 8.8rem 0 20rem;
 }
 
-.site-block { 
-  width: 96rem;
+.site-block {
+  width: 88rem;
   max-width: 100%;
   p {
     width: 72rem;
     max-width: 100%;
   }
   a {
-    border-bottom: 2px solid rgba($text-color, .2);
+    border-bottom: 2px solid rgba($text-color, 0.2);
     text-decoration: none;
     color: $text-color;
     transition: all $animation;
-    background: linear-gradient(12deg, $background-nav 0%, $background-nav 40%, rgba($background-color, 0) 41%); /* w3c */
+    background: linear-gradient(
+      12deg,
+      $background-nav 0%,
+      $background-nav 40%,
+      rgba($background-color, 0) 41%
+    ); /* w3c */
     background-position: 50% 0%;
     background-size: 400% 400%;
-      &:hover {
-      border-bottom: 2px solid rgba($brand-color, .2);
+    &:hover {
+      border-bottom: 2px solid rgba($brand-color, 0.2);
       color: $brand-color;
       background-position: 0% 70%;
     }
@@ -57,18 +67,27 @@ h3 {
 
 // Projects
 .projects {
-  .project { margin-bottom: 18rem; }
-  .project-intro { margin-bottom: 8rem; }
-  h2 { 
+  .project {
+    margin-bottom: 18rem;
+  }
+  .project-intro {
+    margin-bottom: 10rem;
+  }
+  h2 {
     margin-bottom: 0.4rem;
-    font-size: $font-size-l; 
+    font-size: $font-size-l;
   }
   header {
-    h3 { margin-bottom: 0.4rem; }
-    p { 
-      font-size: $font-size-m;
+    margin-bottom: 3.2rem;
+    h3 {
+      margin-bottom: 0.2rem;
+    }
+    p {
+      font-size: $font-size-s;
       margin: 0 0 1.2rem;
       color: $secondary-color;
+      font-family: "IBM Plex Mono", monospace;
+      text-transform: uppercase;
     }
   }
   ul li {
@@ -77,12 +96,14 @@ h3 {
   .project-gallery {
     margin-top: 6rem;
     list-style: none;
-    li { margin: 2rem 0; }
-    img { 
-      width: 96rem;
+    li {
+      margin: 2rem 0;
+    }
+    img {
+      width: 88rem;
       max-width: 100%;
       border-radius: $base-radius;
-      box-shadow: 0 1px 2px rgba($text-color, .2);
+      box-shadow: 0 1px 2px rgba($text-color, 0.2);
     }
   }
 }
@@ -90,33 +111,35 @@ h3 {
 // blog
 .blog {
   margin: 0 0 20rem;
-  h2 { font-size: $font-size-l; }
+  h2 {
+    font-size: $font-size-l;
+  }
   ul {
     width: 72rem;
     max-width: 100%;
-    border-top: 1px solid rgba($text-color, .05);
+    border-top: 1px solid rgba($text-color, 0.05);
   }
   li {
     list-style: none;
     width: 100%;
-    a { 
+    a {
       display: block;
       padding: 0.8rem 1.6rem;
-      border-bottom: 1px solid rgba($text-color, .05);
+      border-bottom: 1px solid rgba($text-color, 0.05);
       border-radius: $base-radius;
       .emoji {
         display: inline-block;
         margin-right: 4px;
         font-size: $font-size-s;
         filter: grayscale(100%);
-        transition: all $animation
-      }  
+        transition: all $animation;
+      }
       &:hover {
-        border-bottom: 1px solid rgba($text-color, .05);
+        border-bottom: 1px solid rgba($text-color, 0.05);
         .emoji {
           margin-right: 12px;
           filter: none;
-        }  
+        }
       }
     }
     .emoji {
@@ -127,7 +150,9 @@ h3 {
 
 .site-footer {
   font-size: $font-size-m;
-  ul { margin-left: -0.6rem; }
+  ul {
+    margin-left: -0.6rem;
+  }
   li {
     display: inline-block;
     list-style: none;
@@ -139,7 +164,12 @@ h3 {
     text-decoration: none;
     color: $secondary-color;
     transition: all $animation;
-    background: linear-gradient(12deg, $background-nav 0%, $background-nav 40%, rgba($background-color, 0) 41%); /* w3c */
+    background: linear-gradient(
+      12deg,
+      $background-nav 0%,
+      $background-nav 40%,
+      rgba($background-color, 0) 41%
+    ); /* w3c */
     background-position: 50% 0%;
     background-size: 400% 400%;
     border-radius: $base-radius;
@@ -147,7 +177,7 @@ h3 {
       display: inline-block;
       filter: grayscale(100%);
       vertical-align: -0.2rem;
-      transition: all $animation
+      transition: all $animation;
     }
     &:hover {
       color: $brand-color;
@@ -159,41 +189,18 @@ h3 {
   }
 }
 
-// post 
-.post { 
-  margin: 8.8rem 0 20rem;
-  header {
-    h1 { 
-      margin-bottom: 0.4rem;
-      letter-spacing: -0.1rem;
-    }
-    time { 
-      font-size: $font-size-m;
-      margin: 0 0 1.2rem;
-      color: $secondary-color;
-    }
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+  body {
+    padding: 3.2rem;
   }
-  .post-content {
-    margin: 6rem 0 0
+  .site-intro {
+    margin: 6.8rem 0 16rem;
   }
-}
-
-// post specials
-.coffee-collage {
-  margin-top: 6rem;
-  p { width: 100%; }
-  img { width: 32%; }
-}
-
-
-@media only screen and ( max-width: 767px) and (min-width: 320px) {
-  body { padding: 3.2rem; }
-  .site-intro, .post { margin: 6.8rem 0 16rem; }
-  .site-footer { 
+  .site-footer {
     text-align: center;
     line-height: 1.6;
   }
-  .site-footer a .emoji { display: none; }
-  .coffee-collage img { width: 48.5%; }
-  
+  .site-footer a .emoji {
+    display: none;
+  }
 }
