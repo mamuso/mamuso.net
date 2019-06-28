@@ -23,6 +23,7 @@ url: "http://www.mamuso.net" # the base hostname & protocol for your site, e.g. 
 twitter:
   username: mamuso
   card: summary
+
 social:
   name: Manuel Muñoz Solera
   links:
@@ -30,7 +31,6 @@ social:
     - https://www.linkedin.com/in/mamuso
     - https://github.com/mamuso
 
-    # Build settings
 markdown: kramdown
 
 permalink: /blog/:categories/:title/
@@ -49,5 +49,5 @@ livereload: true
 #   - vendor/ruby/
 
 plugins:
-  - jekyll-seo-tag
   - jekyll-tidy
+  - jekyll-seo-tag

@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
-gem 'jekyll-seo-tag'
-gem "jekyll-tidy"
-gem 'github-pages', group: :jekyll_plugins
+gem "jekyll"
+group :jekyll_plugins do
+  gem "jekyll-tidy"
+  gem "jekyll-seo-tag"
+end
