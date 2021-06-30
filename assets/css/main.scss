@@ -1,69 +1,80 @@
 ---
 ---
-// Defaults
-$base-font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
-$base-font-size:    1.8rem    !default;
-$base-font-weight:  400       !default;
-$base-line-height:  1         !default;
-$base-max-width:    120.0rem  !default;
-$base-radius:       .3rem     !default;
 
-$text-color:        #333      !default;
-$brand-color:       #4C82D7   !default;
-$brand-alt:         #B60B4D   !default;
-$secondary-color:   #8C9696   !default;
-$background-color:  #F6F8F8   !default;
-$background-alt:    #EDF1F1   !default;
-$background-nav:    #FFF      !default;
+@import "/assets/css/normalize.css";
 
-$font-size-xxxl:    5.8rem      !default;
-$font-size-xxl:     4.4rem      !default;
-$font-size-xl:      2.8rem      !default;
-$font-size-l:       2.4rem      !default;
-$font-size-m:       1.6rem      !default;
-$font-size-s:       1.2rem      !default;
+:root {
+  --bg-primary: #edf1f1;
+  --outer-border: #ffffff;
+  --text-primary: #333333;
+  --text-link: #4c82d7;
 
-$animation:         .3s ease;
+  --font-family-heading: "Manrope", sans-serif;
+  --font-family-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-family-monospace: "Jetbrains mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
-// Reset
-* { padding: 0; margin: 0; -moz-box-sizing: border-box; box-sizing: border-box; }
-html { font-size: 62.5%; }
-body { font-family: $base-font-family; }
+  --font-size-s: 1.4rem;
+  --font-size-m: 1.6rem;
+  --font-size-l: 2.4rem;
+  --font-size-xl: 2.8rem;
+  --font-size-xxl: 5.4rem;
+  --font-size-xxxl: 7.2rem;
 
-// Basic styling
-body {
-  padding: 6rem 8rem 4rem;
-  min-height:100vh;
-  font: $base-font-weight $base-font-size $base-font-family;
-  font-kerning: normal;
-  color: $text-color;
-  border: 1.2rem solid $background-nav;
-  background: -moz-linear-gradient(126deg, $background-color 0%, $background-alt 100%); /* ff3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $background-color), color-stop(100%, $background-alt)); /* safari4+,chrome */
-  background: -webkit-linear-gradient(126deg, $background-color 0%, $background-alt 100%); /* safari5.1+,chrome10+ */
-  background: -o-linear-gradient(126deg, $background-color 0%, $background-alt 100%); /* opera 11.10+ */
-  background: -ms-linear-gradient(126deg, $background-color 0%, $background-alt 100%); /* ie10+ */
-  background: linear-gradient(126deg, $background-color 0%, $background-alt 100%); /* w3c */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$background-color', endColorstr='$background-alt',GradientType=1 ); /* ie6-9 */
-  transition: background 0.5s ease;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-feature-settings:  "kern" 1;
-      -moz-font-feature-settings: "kern" 1;
-        -o-font-feature-settings: "kern" 1;
-          font-feature-settings:  "kern" 1;
+  --animation: 0.2s ease;
+  --radii: 0.3rem;
+
+  --opacity: 0.35;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #182335;
+    --outer-border: #141b2a;
+    --text-primary: #d6deeb;
+    --text-link: #ed64a6;
+  }
+}
+
+@font-face {
+  font-family: Manrope;
+  font-stretch: 50% 150%;
+  font-weight: 100 1000;
+  src: url(/assets/ttf/manrope-wght.ttf) format("truetype-variations");
+}
+
+@font-face {
+  font-family: "Jetbrains mono";
+  font-stretch: 50% 150%;
+  font-weight: 100 1000;
+  src: url(/assets/ttf/jetbrainsmono-wght.ttf) format("truetype-variations");
+}
+
+html {
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
-::selection {
-  background: $brand-color;
-  color: #FFF;
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
-::-moz-selection {
-  background: $brand-color;
-  color: #FFF;
+body {
+  padding: 6rem 8rem 4rem;
+  min-height: 100vh;
+  font: 400 1.8rem var(--font-family-body);
+  font-kerning: normal;
+  line-height: 1.4;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1.2rem solid var(--outer-border);
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+  body {
+    padding: 3.2rem;
+  }
 }
 
 // Import partials
