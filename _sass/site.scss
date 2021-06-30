@@ -1,24 +1,57 @@
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 3rem;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxxl);
+  letter-spacing: -0.02rem;
+}
+
+h3 {
+  margin-bottom: 1rem;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxl);
+  letter-spacing: -0.02rem;
+}
+
 p {
   margin: 1.6rem 0;
   line-height: 1.6;
 }
 
-h2 {
-  margin-bottom: 3rem;
-  font-family: "Playfair Display", serif;
-  font-size: $font-size-xxxl;
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-h3 {
-  margin-bottom: 1rem;
-  font-family: "Playfair Display", serif;
-  font-size: $font-size-xxl;
+a {
+  color: var(--text-link);
+  &::before {
+    margin-right: 0.25ch;
+    opacity: var(--opacity);
+    content: "[";
+  }
+  &::after {
+    margin-left: 0.25ch;
+    opacity: var(--opacity);
+    content: "]";
+  }
 }
 
 // Site header
 .site-header {
+  a {
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
   path {
-    transition: transform $animation;
+    transition: transform var(--animation);
   }
   .logo {
     padding: 0.5rem;
@@ -44,25 +77,6 @@ h3 {
     width: 72rem;
     max-width: 100%;
   }
-  a {
-    border-bottom: 2px solid rgba($text-color, 0.2);
-    text-decoration: none;
-    color: $text-color;
-    transition: all $animation;
-    background: linear-gradient(
-      12deg,
-      $background-nav 0%,
-      $background-nav 40%,
-      rgba($background-color, 0) 41%
-    ); /* w3c */
-    background-position: 50% 0%;
-    background-size: 400% 400%;
-    &:hover {
-      border-bottom: 2px solid rgba($brand-color, 0.2);
-      color: $brand-color;
-      background-position: 0% 70%;
-    }
-  }
 }
 
 // Projects
@@ -75,7 +89,7 @@ h3 {
   }
   h2 {
     margin-bottom: 0.4rem;
-    font-size: $font-size-l;
+    // font-size: $font-size-l;
   }
   header {
     margin-bottom: 3.2rem;
@@ -83,11 +97,11 @@ h3 {
       margin-bottom: 0.2rem;
     }
     p {
-      font-size: $font-size-s;
+      font-size: var(--font-size-s);
       margin: 0 0 1.2rem;
-      color: $secondary-color;
-      font-family: "IBM Plex Mono", monospace;
+      font-family: var(--font-family-monospace);
       text-transform: uppercase;
+      opacity: var(--opacity);
     }
   }
   ul li {
@@ -102,54 +116,14 @@ h3 {
     img {
       width: 88rem;
       max-width: 100%;
-      border-radius: $base-radius;
-      box-shadow: 0 1px 2px rgba($text-color, 0.2);
-    }
-  }
-}
-
-// blog
-.blog {
-  margin: 0 0 20rem;
-  h2 {
-    font-size: $font-size-l;
-  }
-  ul {
-    width: 72rem;
-    max-width: 100%;
-    border-top: 1px solid rgba($text-color, 0.05);
-  }
-  li {
-    list-style: none;
-    width: 100%;
-    a {
-      display: block;
-      padding: 0.8rem 1.6rem;
-      border-bottom: 1px solid rgba($text-color, 0.05);
-      border-radius: $base-radius;
-      .emoji {
-        display: inline-block;
-        margin-right: 4px;
-        font-size: $font-size-s;
-        filter: grayscale(100%);
-        transition: all $animation;
-      }
-      &:hover {
-        border-bottom: 1px solid rgba($text-color, 0.05);
-        .emoji {
-          margin-right: 12px;
-          filter: none;
-        }
-      }
-    }
-    .emoji {
-      font-size: $font-size-s;
+      border-radius: var(--radii);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
     }
   }
 }
 
 .site-footer {
-  font-size: $font-size-m;
+  // font-size: $font-size-m;
   ul {
     margin-left: -0.6rem;
   }
@@ -161,26 +135,14 @@ h3 {
   a {
     display: inline-block;
     padding: 0.2rem 0.6rem;
-    text-decoration: none;
-    color: $secondary-color;
-    transition: all $animation;
-    background: linear-gradient(
-      12deg,
-      $background-nav 0%,
-      $background-nav 40%,
-      rgba($background-color, 0) 41%
-    ); /* w3c */
-    background-position: 50% 0%;
-    background-size: 400% 400%;
-    border-radius: $base-radius;
     .emoji {
       display: inline-block;
       filter: grayscale(100%);
       vertical-align: -0.2rem;
-      transition: all $animation;
+      transition: all var(--animation);
     }
     &:hover {
-      color: $brand-color;
+      // color: $brand-color;
       background-position: 0% 70%;
       .emoji {
         filter: none;

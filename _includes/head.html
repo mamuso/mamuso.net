@@ -5,7 +5,6 @@
     <link rel="icon" type="image/png" href="/assets/img/favicon.png">
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
     {% if jekyll.environment == 'production' %}{% include analytics.html %}{% endif %}
 </head>
