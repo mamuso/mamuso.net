@@ -50,6 +50,8 @@ GEM
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (3.26.0)
+    rss (0.2.9)
+      rexml
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -62,6 +64,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.2.0)
+  rss
 
 BUNDLED WITH
-   2.1.4
+   2.2.17

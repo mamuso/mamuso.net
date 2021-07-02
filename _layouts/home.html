@@ -10,7 +10,13 @@
     <p>I'm a lucky person. I learn new things every day and spend most of my time with smarter people than me. Isn't that great?</p>
     <p>If you want my recipe for cooking the spaghettiest code (my signature dish), or you want to say hi, don't be shy and <a href="mailto:mamuso@mamuso.net">drop me a line</a>.</p>
   </section>
+---
 
+  {% for item in site.collections['external_feed'].docs %}
+  <h2>{{ item.title }}</h2>
+  {% endfor %}
+
+---
   <div class="projects">
     <section class="project project-intro site-block">
         <p>Before joining the Developer Services team at Microsoft, I had a lot of fun in a few other places.</p>
