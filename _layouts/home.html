@@ -5,21 +5,24 @@
   {% include header.html %}
   <section class="site-intro site-block">
     <h2>Hi,</h2>
-    <p>My name is Manuel Muñoz Solera, and I'm a designer working for GitHub as their Director of Product Design. After
-    designing many things for many years, I have found happiness and purpose in (developer) tools.<p>
+    <p>My name is Manuel Muñoz Solera, and I'm a designer. After working on many things for many years, I have found happiness and purpose in building (developer) tools.<p>
     <p>I'm a lucky person. I learn new things every day and spend most of my time with smarter people than me. Isn't that great?</p>
     <p>If you want my recipe for cooking the spaghettiest code (my signature dish), or you want to say hi, don't be shy and <a href="mailto:mamuso@mamuso.net">drop me a line</a>.</p>
   </section>
----
 
-  {% for item in site.collections['external_feed'].docs %}
-  <h2>{{ item.title }}</h2>
-  {% endfor %}
 
----
+  <section class="site-block site-changelog">
+    <p>I maintain a silly <a href="https://mamuso.dev">changelog</a>, where I write about what happens out of work in my localhost. These are the latest entries:</p>
+    <ul>
+      {% for item in site.external_feed limit:6 %}
+        <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+
   <div class="projects">
     <section class="project project-intro site-block">
-        <p>Before joining the Developer Services team at Microsoft, I had a lot of fun in a few other places.</p>
+        <p>I currantly w had a lot of fun in a few other places.</p>
     </section>
 
     <section class="project site-block">
@@ -31,9 +34,6 @@
         problems, bringing a social layer to the Microsoft Office 365 suite of products.</p>
       <p>Working on our <a href="https://github.com/Microsoft/YamUI/">design system</a> was a real treat.</p>
       <ul class="project-gallery">
-        <li><img src="/assets/img/projects/yammer/mkt.png" alt="Yammer marketing pages"></li>
-        <li><img src="/assets/img/projects/yammer/group.png" alt="Yammer group"></li>
-        <li><img src="/assets/img/projects/yammer/mobile.png" alt="Yammer mobile"></li>
         <li><img src="/assets/img/projects/yammer/yamui.png" alt="YamUI modules"></li>
       </ul>
     </section>

@@ -18,13 +18,13 @@ class RssFeedCollector < Jekyll::Generator
          # Add fake virtual documents to the collection
          feed.items.each do |item|
             title = item.title
-            content = item.description
             guid = item.guid
+            link = item.link
             path = "_rss/#{guid}.md"
             path = site.in_source_dir(path)
             doc = Jekyll::Document.new(path, { :site => site, :collection => jekyll_coll })
             doc.data['title'] = title;
-            doc.data['feed_content'] = content;
+            doc.data['link'] = link;
             jekyll_coll.docs << doc
          end
       end

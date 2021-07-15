@@ -67,7 +67,7 @@ a {
 
 // Site
 .site-intro {
-  margin: 8.8rem 0 20rem;
+  margin: 8.8rem 0 16rem;
 }
 
 .site-block {
@@ -79,6 +79,22 @@ a {
   }
 }
 
+.site-changelog {
+  margin: 8.8rem 0 16rem;
+  ul {
+    padding-inline-start: 1.5ch;
+  }
+  li {
+    list-style: none;
+  }
+  li::before {
+    display: inline-block;
+    width: 1.6ch;
+    margin-left: -1.6ch;
+    content: "-";
+    opacity: 0.35;
+  }
+}
 // Projects
 .projects {
   .project {
@@ -155,8 +171,9 @@ a {
   body {
     padding: 3.2rem;
   }
-  .site-intro {
-    margin: 6.8rem 0 16rem;
+  .site-intro,
+  .site-changelog {
+    margin: 6.8rem 0 12rem;
   }
   .site-footer {
     text-align: center;
