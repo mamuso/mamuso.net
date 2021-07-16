@@ -67,7 +67,7 @@ a {
 
 // Site
 .site-intro {
-  margin: 8.8rem 0 16rem;
+  margin: 8.8rem 0 36rem;
 }
 
 .site-block {
@@ -80,7 +80,7 @@ a {
 }
 
 .site-changelog {
-  margin: 8.8rem 0 16rem;
+  margin: 5.2rem 0 0;
   ul {
     padding-inline-start: 1.5ch;
   }
@@ -171,9 +171,8 @@ a {
   body {
     padding: 3.2rem;
   }
-  .site-intro,
-  .site-changelog {
-    margin: 6.8rem 0 12rem;
+  .site-intro {
+    margin: 6.8rem 0 28rem;
   }
   .site-footer {
     text-align: center;

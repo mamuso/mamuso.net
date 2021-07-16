@@ -6,24 +6,22 @@
   <section class="site-intro site-block">
     <h2>Hi,</h2>
     <p>My name is Manuel Muñoz Solera, and I'm a designer. After working on many things for many years, I have found happiness and purpose in building (developer) tools.<p>
-    <p>I'm a lucky person. I learn new things every day and spend most of my time with smarter people than me. Isn't that great?</p>
+    <!-- <p>I'm a lucky person. I learn new things every day and spend most of my time with smarter people than me. Isn't that great?</p> -->
     <p>If you want my recipe for cooking the spaghettiest code (my signature dish), or you want to say hi, don't be shy and <a href="mailto:mamuso@mamuso.net">drop me a line</a>.</p>
-  </section>
 
-
-  <section class="site-block site-changelog">
-    <p>I maintain a silly <a href="https://mamuso.dev">changelog</a>, where I write about what happens out of work in my localhost. These are the latest entries:</p>
-    <ul>
-      {% for item in site.external_feed limit:6 %}
-        <li><a href="{{ item.link }}">{{ item.title }}</a></li>
-      {% endfor %}
-    </ul>
+    <section class="site-block site-changelog">
+      <p>I maintain a silly <a href="https://mamuso.dev">changelog</a>, where I write about what happens out of work in my
+        localhost. These are the latest entries:</p>
+      <ul>
+        {% for item in site.external_feed limit:6 %}
+          <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  
   </section>
 
   <div class="projects">
-    <section class="project project-intro site-block">
-        <p>I currantly w had a lot of fun in a few other places.</p>
-    </section>
 
     <section class="project site-block">
       <header>
